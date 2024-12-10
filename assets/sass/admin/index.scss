@@ -1,0 +1,44 @@
+*{
+    font-size: 0.98rem;
+}
+
+.admin-layout {
+    @apply bg-asmooky-50;
+    .overlay{
+        @apply h-screen w-screen backdrop-blur-md bg-black/30 fixed top-0 right-0 z-40;
+    }
+    .sidebar{
+        @apply fixed z-50 right-0 top-0 h-screen w-2/3 lg:w-[274px];
+        .nav-link.router-link-active {
+            @apply bg-aprimary-600 text-white;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .sidebar{
+        animation: stretchSidebar .5s ease;
+    }
+    .sidebar-opened{
+        animation: stretchContent .5s ease;
+        width: calc(100% - 274px);
+        @apply mr-auto;
+    }
+}
+@keyframes stretchContent {
+    0%{ width: calc(100%); }
+    100%{ width: calc(100% - 274px);}
+}
+@keyframes stretchSidebar {
+    0%{ width: calc(0%); }
+    100%{ width: calc(274px);}
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-aprimary-600;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-aprimary-400;
+}

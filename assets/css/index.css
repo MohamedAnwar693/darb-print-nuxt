@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'DIN Next LT W23';
+  src: url(../fonts/din-next-lt-w23-light.ttf);
+}
+@font-face {
+  font-family: 'Baloo Bhaijaan 2';
+  src: url(../fonts/BalooBhaijaan2-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: 'URW DIN Arabic';
+  src: url(../fonts/alfont_com_AlFont_com_URW-DIN-Arabic.ttf);
+}
+.admin-font {
+  font-family: 'Baloo Bhaijaan 2';
+}
+.body-font {
+  font-family: 'DIN Next LT W23';
+}
+.links-section-title{
+    @apply text-2xl font-bold text-smooky-800;
+}
+.links-ul{
+    @apply flex flex-col gap-2 mt-2;
+}
+.social-link{
+    @apply border border-smooky-50 rounded-full p-2 cursor-pointer hover:bg-smooky-50;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.stretching{
+  animation: stretch .5s ease;
+  @apply w-[3%];
+}
+@keyframes stretch {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 3%;
+  }
+}
+
+.font-superbold{
+  text-shadow: 1.5px 0;
+  @apply shadow-primary-800;
+  letter-spacing:1.5px;
+  font-weight:bold;
+}
+
+input[type="checkbox"]{
+  @apply accent-primary-800 w-5 h-5;
+}
+
+.title{
+  @apply text-2xl lg:text-3xl font-bold;
+}
+
+.sub-title{
+  @apply text-sm lg:text-base;
+}
+
+html, body{
+  scroll-behavior: smooth;
+}
